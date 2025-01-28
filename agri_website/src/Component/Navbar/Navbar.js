@@ -5,46 +5,52 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true); // Change navbar style on scroll
-      } else {
-        setScrolled(false); // Reset navbar style when scroll position is at the top
-      }
+      setScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll); // Listen for scroll events
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll); // Cleanup event listener
-    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
       style={{
-        padding: "20px 30px", // Adjusted padding for better spacing
-        backgroundColor: scrolled ? "rgba(0, 0, 0, 0.7)" : "transparent", // Transparent before scrolling
+        padding: "15px 30px",
+        backgroundColor: scrolled ? "rgba(0, 0, 0, 0.7)" : "transparent",
         color: "white",
         position: "fixed",
         top: 0,
         left: 0,
         width: "100%",
-        transition: "background-color 0.3s ease", // Smooth transition
+        transition: "background-color 0.3s ease",
         zIndex: 10,
         display: "flex",
+        alignItems: "center",
         justifyContent: "space-between",
-        alignItems: "center", // Aligns items in the center vertically
       }}
     >
-      <h1 style={{ fontSize: "42px", fontWeight: "bold" }}>AgriPulse</h1> {/* AgriPulse title */}
+      {/* Logo */}
+      <h1 style={{ fontSize: "40px", fontWeight: "bold" }}>AgriPulse</h1>
 
-      {/* Icons section */}
-      <div className="flex items-center space-x-6"> {/* Added spacing between icons */}
-        {/* Example Camera Icon */}
-        <i className="fas fa-camera" style={{ color: "white", fontSize: "20px", cursor: "pointer" }}></i> {/* Replace with actual camera icon component */}
-        
+      {/* Navigation Links */}
+      <div style={{ display: "flex", gap: "30px", fontSize: "24px" }}>
+        <a href="#home" style={{ textDecoration: "none", color: "white" }}>Home</a>
+        <a href="#detection" style={{ textDecoration: "none", color: "white" }}>Detection</a>
+        <a href="#guidance" style={{ textDecoration: "none", color: "white" }}>Guidance</a>
+        <a href="#about" style={{ textDecoration: "none", color: "white" }}>About</a>
+      </div>
+
+      {/* Icons aligned to the right */}
+      <div style={{ display: "flex", gap: "20px" }}>
+        {/* Camera Icon - Redirects to Detection Page */}
+        <a href="#detection">
+          <i className="ri-camera-fill" style={{ fontSize: "32px", cursor: "pointer" }}></i>
+        </a>
+
         {/* Profile Icon */}
-        <i className="fas fa-user" style={{ color: "white", fontSize: "20px", cursor: "pointer" }}></i> {/* Replace with actual profile icon component */}
+        <a href="#profile">
+          <i className="ri-user-fill" style={{ fontSize: "32px", cursor: "pointer" }}></i>
+        </a>
       </div>
     </nav>
   );

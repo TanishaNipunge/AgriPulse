@@ -18,15 +18,16 @@ const HeroSection = () => {
       </video>
 
       {/* Black overlay with opacity */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>
 
-      <div className="relative z-10 text-white py-40 px-6 text-left">
+      {/* Adjusted padding to move text slightly down */}
+      <div className="relative z-10 text-white py-96 px-3 text-left">
         <div className="container mx-auto">
           <h1 className="text-7xl md:text-6xl font-bold mb-6">Welcome to AgriPulse</h1>
           <p className="text-xl md:text-2xl mb-8">
             Protect your crops with AI-powered disease detection and prevention.
           </p>
-          <button className="bg-white text-blue-500 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">
+          <button className="bg-white text-blue-500 text-xl font-semibold py-5 px-10 rounded-lg hover:bg-gray-100 transition duration-300">
             Get Started
           </button>
         </div>
