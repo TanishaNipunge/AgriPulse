@@ -18,7 +18,7 @@ const HeroSection = () => {
       </video>
 
       {/* Black overlay with opacity */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
       {/* Adjusted padding to move text slightly down */}
       <div className="relative z-10 text-white py-96 px-3 text-left">

@@ -16,7 +16,7 @@ function Navbar() {
     <nav
       style={{
         padding: "15px 30px",
-        backgroundColor: scrolled ? "rgba(0, 0, 0, 0.7)" : "transparent",
+        backgroundColor: scrolled ? "rgba(163, 217, 165, 0.7)" : "transparent",
         color: "white",
         position: "fixed",
         top: 0,
