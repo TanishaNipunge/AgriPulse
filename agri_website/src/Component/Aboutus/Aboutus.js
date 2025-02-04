@@ -36,6 +36,7 @@ export default function AboutSection() {
                     alt="Image 5"
                     className="w-full object-cover rounded-lg shadow-lg place-self-start -translate-y-64"
                 />
+                
             </div>
         </section>
     );

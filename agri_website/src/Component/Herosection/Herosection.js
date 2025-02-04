@@ -27,6 +27,7 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl mb-8">
             Protect your crops with AI-powered disease detection and prevention.
           </p>
+          
           <button className="bg-white text-blue-500 text-xl font-semibold py-5 px-10 rounded-lg hover:bg-gray-100 transition duration-300">
             Get Started
           </button>
